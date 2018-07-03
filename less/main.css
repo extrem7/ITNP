@@ -1,0 +1,124 @@
+@import "../css/bootstrap.min.css";
+@media (min-width: 768px) {
+  .container {
+    width: 750px !important;
+    max-width: 750px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px !important;
+    max-width: 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+    max-width: 1170px !important;
+  }
+}
+a,
+a:link,
+a:visited,
+a:active,
+a:focus {
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:hover,
+a:link:hover,
+a:visited:hover,
+a:active:hover,
+a:focus:hover {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  padding: 0 !important;
+  overflow-x: hidden;
+  overflow-y: visible;
+  word-break: break-word;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+button {
+  outline: none;
+}
+textarea,
+input {
+  resize: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+.cbalink {
+  display: none;
+}
+@font-face {
+  font-family: Name;
+  src: url('file');
+}
+.button {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+.toggle-btn {
+  z-index: 3;
+  background: transparent;
+  border: none;
+  outline: 0;
+  margin: 15px auto 15px;
+}
+.toggle-btn .icon-bar {
+  display: block;
+  width: 30px;
+  margin-bottom: 4px;
+  height: 3px;
+  background-color: black;
+  border-radius: 32px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.modal-vertical-center {
+  text-align: center;
+  padding: 0!important;
+}
+.modal-vertical-center:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.modal-vertical-center .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.red {
+  color: rede;
+}

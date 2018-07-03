@@ -1,0 +1,309 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+@keyframes blurIntro {
+  0% {
+    filter: blur(500px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.black-triangle {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 74%;
+  //  transition: all 700ms ease;
+  z-index: 1;
+}
+
+.triangles {
+  // background: url("../img/main-triangles.png") center center;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: blurIntro 2s;
+  }
+  ul li img {
+    position: absolute;
+  }
+  .triangle {
+    &-1 {
+      left: 8%;
+      top: 34%;
+    }
+    &-2 {
+      left: 61%;
+      top: 19%;
+    }
+    &-3 {
+      left: 50%;
+      top: 4%;
+    }
+    &-4 {
+      right: 3%;
+      top: 18%;
+    }
+    &-5 {
+      left: 8%;
+      top: 13%;
+    }
+    &-6 {
+      display: none;
+    }
+    &-7 {
+      right: 11%;
+      top: 16%;
+    }
+    &-8 {
+      right: 23%;
+      top: 24%;
+    }
+    &-9 {
+      right: 10%;
+      top: 47%;
+    }
+    &-10 {
+      right: 28%;
+      top: 45%;
+    }
+    &-11 {
+      right: 28%;
+      bottom: 25%;
+    }
+    &-12 {
+      right: 16%;
+      bottom: 23%;
+    }
+    &-13 {
+      right: 5%;
+      bottom: 4%;
+    }
+    &-14 {
+      right: 30%;
+      bottom: 11%;
+    }
+    &-15 {
+      right: 43%;
+      bottom: 12%;
+    }
+    &-16 {
+      right: 48%;
+      bottom: 1%;
+    }
+    &-17 {
+      left: 30%;
+      bottom: 17%;
+    }
+    &-18 {
+      left: 6%;
+      bottom: 8%;
+    }
+    &-19 {
+      left: 23%;
+      bottom: 17%;
+    }
+    &-20 {
+      left: 20%;
+      bottom: 34%;
+    }
+    &-21 {
+      left: 11%;
+      bottom: 43%;
+    }
+    &-22 {
+      left: 27%;
+      top: 34%;
+    }
+    &-23 {
+      left: 29%;
+      top: 15%;
+    }
+    &-24 {
+      left: 20%;
+      top: 20%;
+    }
+    &-25 {
+      left: 4%;
+      top: 10%;
+    }
+  }
+}
+
+.scroll-mouse {
+  text-align: center;
+  .absolute-center();
+  bottom: -120px;
+  cursor: pointer;
+  p {
+    color: #e6e7e8;
+    font-family: Roboto;
+    font-size: 14px;
+    margin-top: 34px;
+  }
+}
+
+.content {
+  z-index: 3;
+  position: relative;
+}
+
+.it-logo {
+  margin: 0 auto;
+  display: block;
+}
+
+.section-title {
+  color: @orange;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 30px 0 15px;
+}
+
+.section-text {
+  color: #e6e7e8;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.white-scroll {
+  .jspTrack {
+    background-color: white;
+    height: 2px;
+    bottom: -4px;
+    overflow: visible;
+  }
+  .jspDrag {
+    background-color: @orange;
+    height: 4px;
+    top: -1px;
+    &:before {
+      background-color: @orange;
+    }
+  }
+}
+
+.categories-list {
+  a {
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    &.active {
+      color: @orange;
+      &:before {
+        border-left-color: @orange;
+      }
+    }
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      left: -10px;
+      top: 7px;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+
+      border-left: 12px solid white;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .categories-list {
+    a {
+      margin-top: 10px;
+      margin-left: 20px;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .logo {
+    background-size: 100% 100% !important;
+    height: 525px !important;
+    p {
+      font-size: 24px !important;
+    }
+  }
+
+  .section {
+    padding: 50px 0 !important;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .section-text {
+    text-align: center;
+  }
+
+  .scroll-mouse {
+    display: none;
+  }
+
+  .black-triangle {
+    display: none;
+  }
+
+  .triangles {
+    display: none;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .home {
+    .logo {
+      width: 100vw;
+      height: 100vw !important;
+      padding-top: 0;
+      img {
+        max-width: 60%;
+      }
+      p {
+        font-size: 22px !important;
+      }
+    }
+  }
+}
+

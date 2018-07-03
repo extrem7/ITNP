@@ -1,0 +1,7 @@
+.main {
+  background: url("../img/main-background.png") no-repeat center center;
+  background-size: cover;
+}
+.main .triangles {
+  background: url("../img/main-triangles.png") no-repeat center center;
+}
